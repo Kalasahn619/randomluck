@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card & Number Draw</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0077cc">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>Card & Number Draw</h1>
+
+    <div class="controls">
+      <button id="drawButton" aria-label="Draw 6 cards and a number">Draw Cards</button>
+      <button id="simulateButton" aria-label="Run 100 simulations">Run 100 Simulations</button>
+      <button id="resetButton" aria-label="Reset the app">Reset</button>
+    </div>
+
+    <div class="card-display" id="cardDisplay" aria-live="polite"></div>
+
+    <div class="number-display">
+      Random Number: <span id="numberDisplay" aria-live="polite"></span>
+    </div>
+
+    <h2>Simulation History</h2>
+    <div class="history">
+      <ul id="historyLog"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered:', reg))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
