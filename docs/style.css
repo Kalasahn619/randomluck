@@ -197,3 +197,46 @@ body {
     }
   }
   
+  .red-suit {
+    color: #d00;
+  }
+  .black-suit {
+    color: #222;
+  }
+  
+  #suitOrderControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  #suitOrderControl h3 {
+    text-align: center;
+  }
+  #suitOrderList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    gap: 12px;
+  }
+  #suitOrderList li {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #f8f8f8;
+    cursor: grab;
+    border: 1px solid #ddd;
+    user-select: none;
+    transition: box-shadow 0.2s;
+  }
+  #suitOrderList li.dragging {
+    opacity: 0.5;
+    box-shadow: 0 0 8px #0077cc;
+  }
+  #suitOrderList li.drag-over {
+    border-top: 2px solid #0077cc;
+  }
+  #saveSuitOrderButton {
+    margin-top: 8px;
+  }

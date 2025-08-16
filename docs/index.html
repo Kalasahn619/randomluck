@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Card & Number Draw</title>
+  <title>Random Luck: Card-Based Number Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0077cc">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <div id="suitOrderControl">
+    <h3>Custom Suit Order</h3>
+    <ul id="suitOrderList">
+      <li data-suit="♠" draggable="true">Spades</li>
+      <li data-suit="♣" draggable="true">Clubs</li>
+      <li data-suit="♥" draggable="true">Hearts</li>
+      <li data-suit="♦" draggable="true">Diamonds</li>
+    </ul>
+    <button id="saveSuitOrderButton">Save Order</button>
+  </div>
+
   <div class="container">
-    <h1>Card & Number Draw</h1>
+    <h1>Random Luck: Card-Based Number Generator</h1>
 
     <div class="controls">
       <button id="drawButton" aria-label="Draw 6 cards and a number">Draw Cards</button>
-      <button id="simulateButton" aria-label="Run 100 simulations">Run 100 Simulations</button>
+      <button id="simulateButton" aria-label="Run 500 simulations">Run 500 Simulations</button>
       <button id="resetButton" aria-label="Reset the app">Reset</button>
     </div>
 
@@ -30,7 +41,10 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- ✅ Correct script path (no duplicate) -->
+  <script src="script.js" defer></script>
+
+  <!-- ✅ Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')

@@ -1,14 +1,11 @@
 {
     "name": "Card & Number Draw",
     "short_name": "CardDraw",
-     "id": "/index.html",
-    "start_url": "./index.html",
-    "scope": "./",
+    "start_url": ".",
     "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#ffffff",
+    "background_color": "#f4f4f4",
     "theme_color": "#0077cc",
-    "description": "Simulate card draws and random number generation with visual history tracking.",
+    "description": "Draw cards and numbers with custom suit order.",
     "icons": [
       {
         "src": "icon-192.png",
@@ -22,4 +19,3 @@
       }
     ]
   }
-  
