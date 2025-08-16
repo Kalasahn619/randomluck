@@ -1,0 +1,29 @@
+# System files
+Thumbs.db
+.DS_Store
+*.log
+*.tmp
+
+# Windows folders
+AppData/
+OneDrive/
+NTUSER.*
+*.svg
+*.xml
+
+# VS Code settings
+.vscode/
+
+# Node modules (if you ever add npm)
+node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Personal folders
+Downloads/
+Documents/
+Music/
+Videos/
+Saved Games/
